@@ -9,6 +9,7 @@ import java.io.IOException;
 
 import javax.swing.JFrame;
 
+import ru.swg.island.view.GuiLevel;
 import ru.swg.wheelframework.io.Resources;
 import ru.swg.wheelframework.log.Log;
 import ru.swg.wheelframework.view.DisplayContainer;
@@ -50,6 +51,7 @@ public class Game {
 		container.setY(100);
 		
 		container2.addChild(new GuiImage("./test.png"));
+		container2.addChild(new GuiLevel());
 		
     	final JFrame frame = new JFrame();
 		frame.setSize(new Dimension(300, 300));		
