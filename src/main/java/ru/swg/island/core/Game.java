@@ -13,6 +13,7 @@ import ru.swg.wheelframework.io.Resources;
 import ru.swg.wheelframework.log.Log;
 import ru.swg.wheelframework.view.DisplayContainer;
 import ru.swg.wheelframework.view.FrameworkAdapter;
+import ru.swg.wheelframework.view.ui.GuiImage;
 import ru.swg.wheelframework.view.ui.Sprite;
 
 /**
@@ -27,7 +28,7 @@ public class Game {
 			return;
 		}
 		
-		final DisplayContainer container = new DisplayContainer();
+		final DisplayContainer container = new DisplayContainer(), container2 = new DisplayContainer();
 		final Sprite sprite1 = new Sprite();
 		sprite1.setColor(Color.RED);
 		sprite1.setX(10);
@@ -44,11 +45,16 @@ public class Game {
 		
 		container.addChild(sprite1);
 		container.addChild(sprite2);
+		container2.addChild(container);
+		container.setX(50);
+		container.setY(100);
+		
+		container2.addChild(new GuiImage("./test.png"));
 		
     	final JFrame frame = new JFrame();
 		frame.setSize(new Dimension(300, 300));		
 		frame.setTitle(Resources.getString("app.name"));
-		frame.getContentPane().add(new FrameworkAdapter(container));
+		frame.getContentPane().add(new FrameworkAdapter(container2));
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
