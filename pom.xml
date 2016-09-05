@@ -42,6 +42,7 @@
               <mainClass>ru.swg.island.core.Game</mainClass>
             </manifest>
           </archive>
+          <outputDirectory>./build</outputDirectory>
         </configuration>
       </plugin>
       
@@ -57,7 +58,7 @@
               <goal>copy-dependencies</goal>
             </goals>
             <configuration>
-              <outputDirectory>${project.build.directory}/lib</outputDirectory>
+              <outputDirectory>./build/lib</outputDirectory>
               <overWriteReleases>false</overWriteReleases>
               <overWriteSnapshots>false</overWriteSnapshots>
               <overWriteIfNewer>true</overWriteIfNewer>

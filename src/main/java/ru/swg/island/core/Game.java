@@ -5,9 +5,12 @@ package ru.swg.island.core;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 
+import ru.swg.wheelframework.io.Resources;
+import ru.swg.wheelframework.log.Log;
 import ru.swg.wheelframework.view.DisplayContainer;
 import ru.swg.wheelframework.view.FrameworkAdapter;
 import ru.swg.wheelframework.view.ui.Sprite;
@@ -17,6 +20,13 @@ import ru.swg.wheelframework.view.ui.Sprite;
  */
 public class Game {
 	public static void main(String[] args) {
+		try {
+			Resources.init();
+		} catch (IOException e) {
+			Log.error(e.getLocalizedMessage());
+			return;
+		}
+		
 		final DisplayContainer container = new DisplayContainer();
 		final Sprite sprite1 = new Sprite();
 		sprite1.setColor(Color.RED);
@@ -36,8 +46,8 @@ public class Game {
 		container.addChild(sprite2);
 		
     	final JFrame frame = new JFrame();
-		frame.setSize(new Dimension(100, 100));		
-		frame.setTitle("Test");
+		frame.setSize(new Dimension(300, 300));		
+		frame.setTitle(Resources.getString("app.name"));
 		frame.getContentPane().add(new FrameworkAdapter(container));
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
