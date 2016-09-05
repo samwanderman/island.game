@@ -3,11 +3,11 @@
  */
 package ru.swg.island.core;
 
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
-import ru.swg.wheelframework.view.DisplayContainer;
 import ru.swg.wheelframework.view.FrameworkAdapter;
 import ru.swg.wheelframework.view.ui.Sprite;
 
@@ -16,14 +16,17 @@ import ru.swg.wheelframework.view.ui.Sprite;
  */
 public class Game {
 	public static void main(String[] args) {
-		Sprite a = new Sprite();
-		DisplayContainer b = new DisplayContainer();
-		b.addChild(a);
+		Sprite sprite = new Sprite();
+		sprite.setColor(Color.RED);
+		sprite.setX(10);
+		sprite.setY(10);
+		sprite.setHeight(100);
+		sprite.setWidth(100);
 		
     	JFrame frame = new JFrame();
 		frame.setSize(new Dimension(100, 100));		
 		frame.setTitle("Test");
-		frame.getContentPane().add(new FrameworkAdapter(b));
+		frame.getContentPane().add(new FrameworkAdapter(sprite));
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
