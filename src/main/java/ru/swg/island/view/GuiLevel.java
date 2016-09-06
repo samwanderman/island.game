@@ -3,37 +3,43 @@
  */
 package ru.swg.island.view;
 
-import java.awt.Graphics2D;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.swg.island.core.object.Tile;
-import ru.swg.island.io.TileIO;
-import ru.swg.wheelframework.io.ImageCache;
-import ru.swg.wheelframework.io.Resources;
+import ru.swg.island.core.object.Level;
+import ru.swg.island.core.object.TilePoint;
+import ru.swg.island.io.IO;
+import ru.swg.wheelframework.view.DisplayContainerInterface;
 import ru.swg.wheelframework.view.DisplayObject;
 
 /**
- * Simple level class
+ * Gui level
  */
-public final class GuiLevel extends DisplayObject {
-	private final List<Tile> tiles = new ArrayList<>();
+public class GuiLevel extends DisplayObject implements DisplayContainerInterface {
+	// level base info
+	private final Level info;
+	// gui representation of tiles
+	private final List<GuiTile> tiles = new ArrayList<>();
 	
 	/**
 	 * Constructor
+	 * 
+	 * @param info
 	 */
-	public GuiLevel() 
+	public GuiLevel(final Level info) 
 			throws IOException {
-		final Tile tile = TileIO.load("empty");
-		tiles.add(tile);
-		ImageCache.set(tile.getImage(), Resources.loadImage(tile.getImage()));
-	}
-	
-	@Override
-	public final void paint(final Graphics2D graphics) {
-		for (final Tile tile: tiles) {
-			graphics.drawImage(ImageCache.get(tile.getImage()), 0, 0, null);
+		this.info = info;
+		
+		for (final TilePoint tilePoint: info.getTiles()) {
+			final GuiTile tile = new GuiTile(IO.loadTile(tilePoint.getTile()), tilePoint.getPoint());
+			tile.setParent(this);
+			tiles.add(tile);
 		}
+	}
+
+	@Override
+	public List<GuiTile> getChildren() {
+		return tiles;
 	}
 }
