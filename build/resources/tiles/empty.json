@@ -1,0 +1,5 @@
+{
+  id: 'empty',
+  name: 'Пустая ячейка',
+  image: './tiles/empty.png'
+}

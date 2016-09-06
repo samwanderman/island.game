@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ru.swg.island.core.object.Tile;
+import ru.swg.island.io.TileIO;
 import ru.swg.wheelframework.io.ImageCache;
 import ru.swg.wheelframework.io.Resources;
 import ru.swg.wheelframework.view.DisplayObject;
@@ -22,13 +23,11 @@ public final class GuiLevel extends DisplayObject {
 	/**
 	 * Constructor
 	 */
-	public GuiLevel() {
-		final Tile tile = new Tile("./tiles/empty.png");
+	public GuiLevel() 
+			throws IOException {
+		final Tile tile = TileIO.load("empty");
 		tiles.add(tile);
-		
-		try {
-			ImageCache.set(tile.getImage(), Resources.loadImage(tile.getImage()));
-		} catch (IOException e) { }
+		ImageCache.set(tile.getImage(), Resources.loadImage(tile.getImage()));
 	}
 	
 	@Override
