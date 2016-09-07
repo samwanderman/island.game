@@ -1,5 +1,5 @@
 {
 	id: 'landscape_dirt1',
-	name: 'Земля',
+	name: 'Dirt',
 	image: './tiles/dirt1.png'
 }

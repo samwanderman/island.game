@@ -1,5 +1,5 @@
 {
   id: 'landscape_grass1',
-  name: 'Трава',
+  name: 'Grass',
 	image: './tiles/grass1.png'
 }
