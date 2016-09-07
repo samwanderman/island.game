@@ -22,4 +22,13 @@ public final class Tile {
 	public final String getImage() {
 		return image;
 	}
+	
+	/**
+	 * Get tile name
+	 * 
+	 * @return
+	 */
+	public final String getName() {
+		return name;
+	}
 }
