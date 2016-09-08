@@ -2,7 +2,7 @@
   id: 'level1',
   width: 4,
   height: 4,
-  tiles: [
+  landscapeTiles: [
     {
       tile: 'landscape_water1',
       point: {
@@ -110,6 +110,15 @@
     },
     {
       tile: 'landscape_grass1',
+      point: {
+        x: 3,
+        y: 3
+      }
+    }
+  ],
+  objectTiles: [
+    {
+      tile: 'unit1',
       point: {
         x: 3,
         y: 3

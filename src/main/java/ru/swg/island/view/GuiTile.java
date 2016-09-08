@@ -6,10 +6,10 @@ package ru.swg.island.view;
 import java.io.IOException;
 
 import ru.swg.island.core.Const;
-import ru.swg.island.core.object.Point2D;
 import ru.swg.island.core.object.Tile;
 import ru.swg.wheelframework.io.ImageCache;
 import ru.swg.wheelframework.io.Resources;
+import ru.swg.wheelframework.view.Point2D;
 import ru.swg.wheelframework.view.ui.GuiImage;
 
 /**
@@ -35,5 +35,23 @@ public class GuiTile extends GuiImage {
 		setY(point.getY() * Const.TILE_HEIGHT);
 		setWidth(Const.TILE_WIDTH);
 		setHeight(Const.TILE_HEIGHT);
+	}
+	
+	/**
+	 * Get tile
+	 * 
+	 * @return
+	 */
+	public final Tile getTile() {
+		return tile;
+	}
+
+	/**
+	 * Get point
+	 * 
+	 * @return
+	 */
+	public final Point2D getPoint() {
+		return point;
 	}
 }

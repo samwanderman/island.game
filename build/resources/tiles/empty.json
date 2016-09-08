@@ -1,5 +1,6 @@
 {
   id: 'empty',
-  name: 'Пустая ячейка',
-  image: './tiles/empty.png'
+  name: 'Empty tile',
+  image: './tiles/empty.png',
+  weight: -1
 }

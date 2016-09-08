@@ -11,11 +11,11 @@ import java.util.List;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import ru.swg.island.core.object.Level;
-import ru.swg.island.core.object.Point2D;
 import ru.swg.island.core.object.Tile;
 import ru.swg.island.core.object.TilePoint;
 import ru.swg.island.view.GuiLevel;
 import ru.swg.wheelframework.io.Resources;
+import ru.swg.wheelframework.view.Point2D;
 
 /**
  * Level save/load
@@ -48,15 +48,25 @@ public class IO {
 		level.setWidth(json.get("width").asInt(0));
 		level.setHeight(json.get("height").asInt(0));
 		
-		final List<TilePoint> tiles = new ArrayList<>();
-		level.setTiles(tiles);
+		final List<TilePoint> landscapeTiles = new ArrayList<>();
+		final List<TilePoint> objectTiles = new ArrayList<>();
+		level.setLandscapeTiles(landscapeTiles);
+		level.setObjectTiles(objectTiles);
 		
-		final Iterator<JsonNode> iterator = json.get("tiles").elements();
+		Iterator<JsonNode> iterator = json.get("landscapeTiles").elements();
 		while (iterator.hasNext()) {
 			final JsonNode node = iterator.next();
 			final Point2D point = new Point2D(node.get("point").get("x").asInt(0), node.get("point").get("y").asInt(0));
 			final TilePoint tile = new TilePoint(node.get("tile").asText(), point);
-			tiles.add(tile);
+			landscapeTiles.add(tile);
+		}
+		
+		iterator = json.get("objectTiles").elements();
+		while (iterator.hasNext()) {
+			final JsonNode node = iterator.next();
+			final Point2D point = new Point2D(node.get("point").get("x").asInt(0), node.get("point").get("y").asInt(0));
+			final TilePoint tile = new TilePoint(node.get("tile").asText(), point);
+			objectTiles.add(tile);
 		}
 		
 		return level;

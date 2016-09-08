@@ -13,6 +13,8 @@ public final class Tile {
 	private String name;
 	// Path to image
 	private String image;
+	// Tile weight
+	private int weight;
 	
 	/**
 	 * Get image path
@@ -30,5 +32,14 @@ public final class Tile {
 	 */
 	public final String getName() {
 		return name;
+	}
+	
+	/**
+	 * Get tile weight
+	 * 
+	 * @return
+	 */
+	public final int getWeight() {
+		return weight;
 	}
 }

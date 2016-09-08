@@ -1,5 +1,6 @@
 {
   id: 'landscape_water1',
   name: 'Water',
-  image: './tiles/water1.png'
+  image: './tiles/water1.png',
+  weight: -1
 }

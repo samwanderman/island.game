@@ -15,8 +15,10 @@ public final class Level {
 	private int width;
 	// height in cells
 	private int height;
-	// tiles list
-	private List<TilePoint> tiles;
+	// landscape tiles list
+	private List<TilePoint> landscapeTiles;
+	// object tiles
+	private List<TilePoint> objectTiles;
 	
 	/**
 	 * Set id
@@ -25,6 +27,15 @@ public final class Level {
 	 */
 	public final void setId(final String id) {
 		this.id = id;
+	}
+	
+	/**
+	 * Get width
+	 * 
+	 * @return
+	 */
+	public final int getWidth() {
+		return width;
 	}
 	
 	/**
@@ -37,6 +48,15 @@ public final class Level {
 	}
 	
 	/**
+	 * Get height
+	 * 
+	 * @return
+	 */
+	public final int getHeight() {
+		return height;
+	}
+	
+	/**
 	 * Set height
 	 * 
 	 * @param height
@@ -46,20 +66,38 @@ public final class Level {
 	}
 	
 	/**
-	 * Get tiles
+	 * Get landscape tiles
 	 * 
 	 * @return
 	 */
-	public final List<TilePoint> getTiles() {
-		return tiles;
+	public final List<TilePoint> getLandscapeTiles() {
+		return landscapeTiles;
 	}
 
 	/**
-	 * Set tiles
+	 * Set landscape tiles
 	 * 
 	 * @param tiles
 	 */
-	public final void setTiles(final List<TilePoint> tiles) {
-		this.tiles = tiles;
+	public final void setLandscapeTiles(final List<TilePoint> tiles) {
+		landscapeTiles = tiles;
+	}	
+	
+	/**
+	 * Get object tiles
+	 * 
+	 * @return
+	 */
+	public final List<TilePoint> getObjectTiles() {
+		return objectTiles;
+	}
+	
+	/**
+	 * Set object tiles
+	 * 
+	 * @param tiles
+	 */
+	public final void setObjectTiles(final List<TilePoint> tiles) {
+		objectTiles = tiles;
 	}
 }
