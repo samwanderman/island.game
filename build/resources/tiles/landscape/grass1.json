@@ -1,0 +1,6 @@
+{
+  id: 'grass1',
+  name: 'Grass',
+	image: './tiles/landscape/grass1.png',
+	weight: 0
+}

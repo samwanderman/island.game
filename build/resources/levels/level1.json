@@ -4,112 +4,112 @@
   height: 4,
   landscapeTiles: [
     {
-      tile: 'landscape_water1',
+      tile: 'water1',
       point: {
         x: 0,
         y: 0
       }
     },
     {
-      tile: 'landscape_water1',
+      tile: 'water1',
       point: {
         x: 0,
         y: 1
       }
     },
     {
-      tile: 'landscape_water1',
+      tile: 'water1',
       point: {
         x: 0,
         y: 2
       }
     },
     {
-      tile: 'landscape_water1',
+      tile: 'water1',
       point: {
         x: 0,
         y: 3
       }
     },
     {
-      tile: 'landscape_water1',
+      tile: 'water1',
       point: {
         x: 1,
         y: 0
       }
     },
     {
-      tile: 'landscape_water1',
+      tile: 'water1',
       point: {
         x: 1,
         y: 1
       }
     },
     {
-      tile: 'landscape_dirt1',
+      tile: 'dirt1',
       point: {
         x: 1,
         y: 2
       }
     },
     {
-      tile: 'landscape_dirt1',
+      tile: 'dirt1',
       point: {
         x: 1,
         y: 3
       }
     },
     {
-      tile: 'landscape_water1',
+      tile: 'water1',
       point: {
         x: 2,
         y: 0
       }
     },
     {
-      tile: 'landscape_dirt1',
+      tile: 'dirt1',
       point: {
         x: 2,
         y: 1
       }
     },
     {
-      tile: 'landscape_grass1',
+      tile: 'grass1',
       point: {
         x: 2,
         y: 2
       }
     },
     {
-      tile: 'landscape_grass1',
+      tile: 'grass1',
       point: {
         x: 2,
         y: 3
       }
     },
     {
-      tile: 'landscape_dirt1',
+      tile: 'dirt1',
       point: {
         x: 3,
         y: 0
       }
     },
     {
-      tile: 'landscape_grass1',
+      tile: 'rock1',
       point: {
         x: 3,
         y: 1
       }
     },
     {
-      tile: 'landscape_grass1',
+      tile: 'grass2',
       point: {
         x: 3,
         y: 2
       }
     },
     {
-      tile: 'landscape_grass1',
+      tile: 'grass2',
       point: {
         x: 3,
         y: 3

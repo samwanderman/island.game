@@ -17,7 +17,7 @@ import ru.swg.wheelframework.view.ui.GuiImage;
  */
 public class GuiTile extends GuiImage {
 	private final Tile tile;
-	private final Point2D point;
+	private Point2D point;
 	
 	/**
 	 * Constructor
@@ -53,5 +53,14 @@ public class GuiTile extends GuiImage {
 	 */
 	public final Point2D getPoint() {
 		return point;
+	}
+	
+	/**
+	 * Set point
+	 * 
+	 * @param point
+	 */
+	public final void setPoint(final Point2D point) {
+		this.point = point;
 	}
 }

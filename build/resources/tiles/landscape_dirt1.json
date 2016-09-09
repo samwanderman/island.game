@@ -1,6 +1,0 @@
-{
-	id: 'landscape_dirt1',
-	name: 'Dirt',
-	image: './tiles/dirt1.png',
-	weight: 0
-}
