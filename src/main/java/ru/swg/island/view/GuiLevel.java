@@ -17,9 +17,9 @@ import ru.swg.wheelframework.ai.Logic;
 import ru.swg.wheelframework.event.Events;
 import ru.swg.wheelframework.event.event.GuiEvent;
 import ru.swg.wheelframework.event.event.MouseEvent;
+import ru.swg.wheelframework.event.interfaces.MouseEventInterface;
 import ru.swg.wheelframework.event.listener.MouseEventListener;
 import ru.swg.wheelframework.view.DisplayObject;
-import ru.swg.wheelframework.view.MouseEventInterface;
 import ru.swg.wheelframework.view.Point2D;
 
 /**
@@ -85,7 +85,6 @@ public class GuiLevel extends DisplayObject implements MouseEventInterface {
 	@Override
 	protected final void unregisterListeners() {
 		super.unregisterListeners();
-		Events.removeListener(MouseEvent.class, mouseEventListener);
 	}
 	
 	/**
