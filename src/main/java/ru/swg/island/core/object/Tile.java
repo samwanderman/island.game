@@ -15,6 +15,8 @@ public final class Tile {
 	private String image;
 	// Tile weight
 	private int weight;
+	// z-index of tile
+	private int z;
 	
 	/**
 	 * Get image path
@@ -41,5 +43,14 @@ public final class Tile {
 	 */
 	public final int getWeight() {
 		return weight;
+	}
+	
+	/**
+	 * Get z
+	 * 
+	 * @return
+	 */
+	public final int getZ() {
+		return z;
 	}
 }

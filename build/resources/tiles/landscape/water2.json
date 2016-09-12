@@ -2,5 +2,6 @@
   id: 'water2',
   name: 'Water',
   image: './tiles/landscape/water2.png',
+  z: 1,
   weight: -1
 }

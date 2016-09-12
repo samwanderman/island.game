@@ -33,6 +33,7 @@ public class GuiTile extends GuiImage {
 		ImageCache.set(tile.getImage(), Resources.loadImage(tile.getImage()));
 		setX(point.getX() * Const.TILE_WIDTH);
 		setY(point.getY() * Const.TILE_HEIGHT);
+		setZ(tile.getZ());
 		setWidth(Const.TILE_WIDTH);
 		setHeight(Const.TILE_HEIGHT);
 	}

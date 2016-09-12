@@ -6,6 +6,7 @@ package ru.swg.island.view;
 import java.awt.Graphics2D;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import ru.swg.island.core.Const;
@@ -48,12 +49,14 @@ public class GuiLevel extends DisplayObject implements MouseEventInterface {
 			tile.setParent(this);
 			landscapeTiles.add(tile);
 		}
+		Collections.sort(landscapeTiles, new GuiTileComparator());
 		
 		for (final TilePoint tilePoint: level.getObjectTiles()) {
 			final GuiObjectTile tile = new GuiObjectTile(IO.loadTile(tilePoint.getTile()), tilePoint.getPoint());
 			tile.setParent(this);
 			objectTiles.add(tile);
 		}
+		Collections.sort(objectTiles, new GuiTileComparator());
 	}
 
 	/**

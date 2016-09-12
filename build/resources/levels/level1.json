@@ -4,112 +4,112 @@
   height: 4,
   landscapeTiles: [
     {
-      tile: 'water1',
+      tile: 'landscape/water1',
       point: {
         x: 0,
         y: 0
       }
     },
     {
-      tile: 'water1',
+      tile: 'landscape/water1',
       point: {
         x: 0,
         y: 1
       }
     },
     {
-      tile: 'water1',
+      tile: 'landscape/water1',
       point: {
         x: 0,
         y: 2
       }
     },
     {
-      tile: 'water1',
+      tile: 'landscape/water1',
       point: {
         x: 0,
         y: 3
       }
     },
     {
-      tile: 'water1',
+      tile: 'landscape/water1',
       point: {
         x: 1,
         y: 0
       }
     },
     {
-      tile: 'water1',
+      tile: 'landscape/water1',
       point: {
         x: 1,
         y: 1
       }
     },
     {
-      tile: 'dirt1',
+      tile: 'landscape/dirt1',
       point: {
         x: 1,
         y: 2
       }
     },
     {
-      tile: 'dirt1',
+      tile: 'landscape/dirt1',
       point: {
         x: 1,
         y: 3
       }
     },
     {
-      tile: 'water1',
+      tile: 'landscape/water1',
       point: {
         x: 2,
         y: 0
       }
     },
     {
-      tile: 'dirt1',
+      tile: 'landscape/dirt1',
       point: {
         x: 2,
         y: 1
       }
     },
     {
-      tile: 'grass1',
+      tile: 'landscape/grass1',
       point: {
         x: 2,
         y: 2
       }
     },
     {
-      tile: 'grass1',
+      tile: 'landscape/grass1',
       point: {
         x: 2,
         y: 3
       }
     },
     {
-      tile: 'dirt1',
+      tile: 'landscape/dirt1',
       point: {
         x: 3,
         y: 0
       }
     },
     {
-      tile: 'rock1',
+      tile: 'landscape/rock1',
       point: {
         x: 3,
         y: 1
       }
     },
     {
-      tile: 'grass2',
+      tile: 'landscape/grass2',
       point: {
         x: 3,
         y: 2
       }
     },
     {
-      tile: 'grass2',
+      tile: 'landscape/grass2',
       point: {
         x: 3,
         y: 3
@@ -118,7 +118,7 @@
   ],
   objectTiles: [
     {
-      tile: 'unit1',
+      tile: 'units/unit1',
       point: {
         x: 3,
         y: 3
