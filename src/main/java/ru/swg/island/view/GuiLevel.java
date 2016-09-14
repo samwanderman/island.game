@@ -19,6 +19,7 @@ import ru.swg.wheelframework.event.event.GuiEvent;
 import ru.swg.wheelframework.event.event.MouseEvent;
 import ru.swg.wheelframework.event.interfaces.MouseEventInterface;
 import ru.swg.wheelframework.event.listener.MouseEventListener;
+import ru.swg.wheelframework.log.Log;
 import ru.swg.wheelframework.view.DisplayObject;
 import ru.swg.wheelframework.view.Point2D;
 
@@ -54,6 +55,7 @@ public class GuiLevel extends DisplayObject implements MouseEventInterface {
 		for (final TilePoint tilePoint: level.getObjectTiles()) {
 			final GuiObjectTile tile = new GuiObjectTile(IO.loadTile(tilePoint.getTile()), tilePoint.getPoint());
 			tile.setParent(this);
+			tile.setSelected(true);
 			objectTiles.add(tile);
 		}
 		Collections.sort(objectTiles, new GuiTileComparator());
@@ -115,10 +117,9 @@ public class GuiLevel extends DisplayObject implements MouseEventInterface {
 	@Override
 	public final void mouseClick(final MouseEvent event) {
 		final Point2D point = extractPointFromEvent(event);
-		if ((point.getX() < 0) || (point.getX() >= level.getWidth()) || (point.getY() < 0) || (point.getY() > level.getHeight())) {
+		if ((point.getX() < 0) || (point.getX() >= level.getWidth()) || (point.getY() < 0) || (point.getY() >= level.getHeight())) {
 			return;
 		}
-		// FIXME
 		final GuiObjectTile tile = objectTiles.get(0);
 		tile.setPath(Logic.findPath(getPathMap(), tile.getPoint(), point));
 	}

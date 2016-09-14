@@ -3,6 +3,7 @@
  */
 package ru.swg.island.view;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -21,9 +22,19 @@ import ru.swg.wheelframework.view.Point2D;
  */
 public class GuiObjectTile extends GuiTile implements SyncEventInterface {
 	private SimpleChangePositionAnimation animChangePos = null;
+	private boolean selected = false;
 	
 	// sync event listener
 	private final SyncEventListener syncEventListener = new SyncEventListener(this);
+	
+	/**
+	 * Set element selected
+	 * 
+	 * @param selected
+	 */
+	protected final void setSelected(final boolean selected) {
+		this.selected = selected;
+	}
 
 	@Override
 	protected final void registerListeners() {
@@ -43,6 +54,8 @@ public class GuiObjectTile extends GuiTile implements SyncEventInterface {
 			animChangePos.run();
 		}
 		super.paint(graphics);
+		graphics.setColor(Color.GREEN);
+		graphics.drawRect(getAbsoluteX(), getAbsoluteY(), getWidth(), getHeight());
 	}
 	
 	/**
@@ -62,6 +75,10 @@ public class GuiObjectTile extends GuiTile implements SyncEventInterface {
 	 * @param path
 	 */
 	public final void setPath(final LinkedList<Point2D> path) {
+		if ((path == null) || (path.size() <= 1)) {
+			return;
+		}
+		
 		animChangePos = new SimpleChangePositionAnimation(this, path, (path.size() - 1) * Config.GLOBAL_TIMER_STEP * 100);
 		animChangePos.start();
 	}

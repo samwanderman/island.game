@@ -3,6 +3,8 @@
  */
 package ru.swg.island.view;
 
+import java.awt.Graphics2D;
+import java.awt.Image;
 import java.io.IOException;
 
 import ru.swg.island.core.Const;
@@ -36,6 +38,14 @@ public class GuiTile extends GuiImage {
 		setZ(tile.getZ());
 		setWidth(Const.TILE_WIDTH);
 		setHeight(Const.TILE_HEIGHT);
+	}
+	
+	@Override
+	public void paint(final Graphics2D graphics) {
+		final Image img = ImageCache.get(getPath());
+		if (img != null) {
+			graphics.drawImage(img, getAbsoluteX() - (img.getWidth(null) - Const.TILE_WIDTH) / 2, getAbsoluteY() - (img.getHeight(null) - Const.TILE_HEIGHT) / 2, null);
+		}
 	}
 	
 	/**
