@@ -9,11 +9,11 @@ import java.util.LinkedList;
 
 import ru.swg.island.animation.SimpleChangePositionAnimation;
 import ru.swg.island.core.object.Tile;
+import ru.swg.wheelframework.core.Config;
 import ru.swg.wheelframework.event.Events;
 import ru.swg.wheelframework.event.event.SyncEvent;
 import ru.swg.wheelframework.event.interfaces.SyncEventInterface;
 import ru.swg.wheelframework.event.listener.SyncEventListener;
-import ru.swg.wheelframework.log.Log;
 import ru.swg.wheelframework.view.Point2D;
 
 /**
@@ -62,11 +62,14 @@ public class GuiObjectTile extends GuiTile implements SyncEventInterface {
 	 * @param path
 	 */
 	public final void setPath(final LinkedList<Point2D> path) {
-		animChangePos = new SimpleChangePositionAnimation(this, path, 500);
+		animChangePos = new SimpleChangePositionAnimation(this, path, (path.size() - 1) * Config.GLOBAL_TIMER_STEP * 100);
+		animChangePos.start();
 	}
 	
 	@Override
-	public void onSync() {
-		Log.info("sync! from " + this);
+	public final void sync() {
+		if (animChangePos != null) {
+			animChangePos.run();
+		}
 	}
 }

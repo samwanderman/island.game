@@ -5,8 +5,12 @@ package ru.swg.island.animation;
 
 import java.util.List;
 
+import ru.swg.island.core.Const;
 import ru.swg.island.view.GuiTile;
 import ru.swg.wheelframework.animation.Animation;
+import ru.swg.wheelframework.core.Config;
+import ru.swg.wheelframework.event.Events;
+import ru.swg.wheelframework.event.event.GuiRepaintEvent;
 import ru.swg.wheelframework.view.Point2D;
 
 /**
@@ -15,13 +19,16 @@ import ru.swg.wheelframework.view.Point2D;
 public final class SimpleChangePositionAnimation implements Animation {
 	// Animation target
 	private final GuiTile target;
-	// Animation speed
-	private final int speed;
-	// Animation path
-	private final List<Point2D> path;
 	// animation running
 	private boolean running = false;
-	
+	// Animation path
+	private final List<Point2D> path;
+	// Animation speed
+	private final int speed;
+	// step speed
+	private final int stepSpeed;
+	// current step
+	private int step;
 	
 	/**
 	 * Constructor
@@ -34,6 +41,8 @@ public final class SimpleChangePositionAnimation implements Animation {
 		this.target = target;
 		this.speed = speed;
 		this.path = path;
+		step = 0;
+		stepSpeed = speed / (path.size() - 1);
 	}
 	
 	@Override
@@ -59,12 +68,29 @@ public final class SimpleChangePositionAnimation implements Animation {
 
 	@Override
 	public final void run() {
-		if (!running || (path.size() == 0)) {
+		if (!running) {
 			return;
 		}
 		
-		final Point2D point = path.get(0);
+		if (step >= speed) {
+			stop();
+			final Point2D endPoint = path.get(path.size() - 1);
+			target.setPoint(endPoint);
+			target.setX(endPoint.getX() * Const.TILE_WIDTH);
+			target.setY(endPoint.getY() * Const.TILE_HEIGHT);
+			return;
+		}
+		
+		final int idx = step / stepSpeed, offset = step % stepSpeed;
+		final Point2D point = path.get(idx), nextPoint = path.get(idx + 1);
+		final float dx = (nextPoint.getX() - point.getX()) * (float) offset / stepSpeed;
+		final float dy = (nextPoint.getY() - point.getY()) * (float) offset / stepSpeed; 
+		
 		target.setPoint(point);
-		path.remove(0);
+		target.setX(point.getX() * Const.TILE_WIDTH + (int) (dx * Const.TILE_WIDTH));
+		target.setY(point.getY() * Const.TILE_HEIGHT + (int) (dy * Const.TILE_HEIGHT));
+		Events.dispatch(new GuiRepaintEvent());
+		
+		step += Config.GLOBAL_TIMER_STEP;
 	}
 }
