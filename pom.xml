@@ -19,11 +19,17 @@
     <!-- Versions -->
     <java.version>1.7</java.version>
   </properties>
-
+  
   <dependencies>
     <dependency>
       <groupId>ru.swg</groupId>
       <artifactId>wheelframework</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+  
+    <dependency>
+      <groupId>ru.swg.island</groupId>
+      <artifactId>common</artifactId>
       <version>0.0.1</version>
     </dependency>
   </dependencies>
@@ -45,7 +51,7 @@
           <outputDirectory>./build</outputDirectory>
         </configuration>
       </plugin>
-      
+       
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>

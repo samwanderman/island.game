@@ -5,7 +5,8 @@ package ru.swg.island.core;
 
 import java.io.IOException;
 
-import ru.swg.island.io.IO;
+import ru.swg.island.common.core.Const;
+import ru.swg.island.common.io.IO;
 import ru.swg.wheelframework.io.Resources;
 import ru.swg.wheelframework.view.Scene;
 
