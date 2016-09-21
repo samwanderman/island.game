@@ -13,8 +13,8 @@ import ru.swg.wheelframework.view.Scene;
 /**
  * Launcher
  */
-public class Game {
-	public static void main(String[] args) 
+public final class Game {
+	public static final void main(final String[] args) 
 			throws IOException {
 		Resources.init();		
 		new Scene(Resources.getString("app.name"), IO.loadLevel("level1"), Const.WINDOW_WIDTH, Const.WINDOW_HEIGHT);
