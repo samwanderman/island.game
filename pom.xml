@@ -45,7 +45,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>ru.swg.island.core.Game</mainClass>
+              <mainClass>ru.swg.island.game.core.Game</mainClass>
             </manifest>
           </archive>
           <outputDirectory>./build</outputDirectory>
