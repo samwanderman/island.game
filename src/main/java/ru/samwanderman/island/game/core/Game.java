@@ -1,7 +1,7 @@
 /**
  * @author Potapov Sergei (sam-wanderman@yandex.ru)
  */
-package ru.swg.island.game.core;
+package ru.samwanderman.island.game.core;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -17,16 +17,16 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import ru.swg.island.common.core.GameBoard;
-import ru.swg.island.common.core.object.Level;
-import ru.swg.island.common.io.IO;
-import ru.swg.wheelframework.io.KeyAdapter;
-import ru.swg.wheelframework.io.MouseAdapter;
-import ru.swg.wheelframework.io.Resources;
-import ru.swg.wheelframework.log.Log;
-import ru.swg.wheelframework.view.FrameworkAdapter;
-import ru.swg.wheelframework.view.Padding;
-import ru.swg.wheelframework.view.ui.ScrollPanel;
+import ru.samwanderman.island.common.core.GameBoard;
+import ru.samwanderman.island.common.core.object.Level;
+import ru.samwanderman.island.common.io.IO;
+import ru.samwanderman.rtwf.io.KeyAdapter;
+import ru.samwanderman.rtwf.io.MouseAdapter;
+import ru.samwanderman.rtwf.io.Resources;
+import ru.samwanderman.rtwf.log.Log;
+import ru.samwanderman.rtwf.view.FrameworkAdapter;
+import ru.samwanderman.rtwf.view.Padding;
+import ru.samwanderman.rtwf.view.ui.ScrollPanel;
 
 /**
  * Launcher
@@ -62,7 +62,7 @@ public final class Game extends JFrame {
 	private Game(final int width, final int height) 
 			throws IOException {
 		gameBoard = new GameBoard();
-		setTitle(Resources.getString("title.game.editor"));
+		setTitle(Resources.getString("title.game"));
 		setLayout(null);
 		setSize(new Dimension(width, height));
 		getContentPane().setBackground(Color.BLACK);

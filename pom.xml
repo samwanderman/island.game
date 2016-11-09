@@ -4,8 +4,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   
   <modelVersion>4.0.0</modelVersion>
-  <groupId>ru.swg</groupId>
-  <artifactId>island</artifactId>
+  <groupId>ru.samwanderman.island</groupId>
+  <artifactId>game</artifactId>
   <version>0.0.1</version>
   <name>Sam Wanderman's Island</name>
   <description>2D Java Game by Sam Wanderman</description>
@@ -22,19 +22,21 @@
   
   <dependencies>
     <dependency>
-      <groupId>ru.swg</groupId>
-      <artifactId>wheelframework</artifactId>
+      <groupId>ru.samwanderman</groupId>
+      <artifactId>rtwf</artifactId>
       <version>0.0.1</version>
     </dependency>
   
     <dependency>
-      <groupId>ru.swg.island</groupId>
+      <groupId>ru.samwanderman.island</groupId>
       <artifactId>common</artifactId>
       <version>0.0.1</version>
     </dependency>
   </dependencies>
   
   <build>
+  	<finalName>game</finalName>
+  
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -45,7 +47,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>ru.swg.island.game.core.Game</mainClass>
+              <mainClass>ru.samwanderman.island.game.core.Game</mainClass>
             </manifest>
           </archive>
           <outputDirectory>./build</outputDirectory>
