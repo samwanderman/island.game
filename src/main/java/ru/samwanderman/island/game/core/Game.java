@@ -20,13 +20,13 @@ import javax.swing.JMenuItem;
 import ru.samwanderman.island.common.core.GameBoard;
 import ru.samwanderman.island.common.core.object.Level;
 import ru.samwanderman.island.common.io.IO;
-import ru.samwanderman.rtwf.io.KeyAdapter;
-import ru.samwanderman.rtwf.io.MouseAdapter;
-import ru.samwanderman.rtwf.io.Resources;
-import ru.samwanderman.rtwf.log.Log;
-import ru.samwanderman.rtwf.view.FrameworkAdapter;
-import ru.samwanderman.rtwf.view.Padding;
-import ru.samwanderman.rtwf.view.ui.ScrollPanel;
+import ru.samwanderman.wheel.io.KeyAdapter;
+import ru.samwanderman.wheel.io.MouseAdapter;
+import ru.samwanderman.wheel.io.Resources;
+import ru.samwanderman.wheel.log.Log;
+import ru.samwanderman.wheel.view.FrameworkAdapter;
+import ru.samwanderman.wheel.view.Padding;
+import ru.samwanderman.wheel.view.ui.ScrollPanel;
 
 /**
  * Launcher
