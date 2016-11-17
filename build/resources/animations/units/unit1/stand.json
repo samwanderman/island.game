@@ -1,0 +1,4 @@
+{
+	speed: 500,
+	data: [ '/animations/units/unit1/stand/0.png' ]
+}

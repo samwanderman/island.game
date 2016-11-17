@@ -3,5 +3,6 @@
   name: 'unit1',
   image: './tiles/units/unit1.png',
   z: 1000,
-  weight: 1
+  weight: 1,
+  animations: [ 'stand', 'walk' ]
 }

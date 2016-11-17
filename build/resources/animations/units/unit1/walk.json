@@ -1,0 +1,11 @@
+{
+	speed: 500,
+	data: [
+		'/animations/units/unit1/walk/0.png',
+		'/animations/units/unit1/walk/1.png',
+		'/animations/units/unit1/walk/2.png',
+		'/animations/units/unit1/walk/3.png',
+		'/animations/units/unit1/walk/4.png',
+		'/animations/units/unit1/walk/5.png'
+	]
+}
