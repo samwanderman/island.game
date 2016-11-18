@@ -1,5 +1,6 @@
 {
 	speed: 500,
+	sound: './sound/units/unit1/walk.wav',
 	data: [
 		'/animations/units/unit1/walk/0.png',
 		'/animations/units/unit1/walk/1.png',
