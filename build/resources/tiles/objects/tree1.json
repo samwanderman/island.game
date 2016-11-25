@@ -1,5 +1,7 @@
 {
   id: 'tree1',
   name: 'tree1',
-  image: './tiles/objects/tree1.png'
+  image: './tiles/objects/tree1.png',
+  health: 100,
+  maxHealth: 100
 }
