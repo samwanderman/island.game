@@ -4,7 +4,7 @@
   image: './tiles/units/unit1.png',
   z: 1000,
   weight: 1,
-  animations: [ 'stand', 'walk' ],
+  animations: [ 'stand', 'walk', 'attack' ],
   health: 100,
   maxHealth: 100
 }

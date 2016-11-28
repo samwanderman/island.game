@@ -1,0 +1,12 @@
+{
+	speed: 500,
+	sound: './sound/units/unit1/attack.wav',
+	data: [
+		'/animations/units/unit1/attack/0.png',
+		'/animations/units/unit1/attack/1.png',
+		'/animations/units/unit1/attack/2.png',
+		'/animations/units/unit1/attack/3.png',
+		'/animations/units/unit1/attack/4.png',
+		'/animations/units/unit1/attack/5.png'
+	]
+}
