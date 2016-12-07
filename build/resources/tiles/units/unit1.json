@@ -5,6 +5,7 @@
   z: 1000,
   weight: 1,
   animations: [ 'stand', 'walk', 'attack' ],
+  attack: 10,
   health: 100,
   maxHealth: 100
 }
