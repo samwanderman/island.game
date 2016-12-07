@@ -1,4 +1,5 @@
 {
+	name: 'walk',
 	speed: 500,
 	sound: './sound/units/unit1/walk.wav',
 	data: [

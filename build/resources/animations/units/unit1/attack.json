@@ -1,4 +1,5 @@
 {
+	name: 'attack',
 	speed: 500,
 	sound: './sound/units/unit1/attack.wav',
 	data: [
