@@ -1,11 +1,11 @@
 {
   id: 'unit1',
   name: 'unit1',
-  image: './tiles/units/unit1.png',
+  image: './tiles/units/unit1/base.png',
   z: 1000,
   weight: 1,
-  animations: [ 'stand', 'walk', 'attack' ],
-  attack: 10,
+  animations: [ 'stand', 'walk', 'attack', 'dead' ],
+  attack: 1,
   health: 100,
   maxHealth: 100
 }

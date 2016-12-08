@@ -1,0 +1,9 @@
+{
+	name: 'dead',
+	speed: 500,
+	data: [
+		'/animations/units/unit1/dead/0.png',
+		'/animations/units/unit1/dead/1.png',
+		'/animations/units/unit1/dead/2.png'
+	]
+}
