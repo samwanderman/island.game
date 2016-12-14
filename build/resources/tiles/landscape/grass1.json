@@ -2,6 +2,6 @@
   id: 'grass1',
   name: 'Grass',
 	image: './tiles/landscape/grass1.png',
-	z: 1,
+	z: 3,
 	weight: 0
 }
