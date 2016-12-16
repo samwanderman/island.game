@@ -62,6 +62,7 @@ public final class Game extends JFrame {
 	private Game(final int width, final int height) 
 			throws IOException {
 		gameBoard = new GameBoard();
+		setIconImage(Resources.loadImage("/oth/icon.png").getContent());
 		setTitle(Resources.getString("title.game"));
 		setLayout(null);
 		setSize(new Dimension(width, height));
